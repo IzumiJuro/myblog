@@ -43,7 +43,12 @@ export default defineConfig({
     }
   },
   output: "server",
-  adapter: vercel()
+  adapter: vercel({
+    webAnalytics: {
+      enabled: true,
+    },
+    maxDuration: 8,
+  })
 });
 function rawFonts(ext: Array<string>) {
   return {
