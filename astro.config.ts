@@ -11,6 +11,7 @@ import expressiveCode from "astro-expressive-code";
 import { expressiveCodeOptions } from "./src/site.config";
 
 import vercel from "@astrojs/vercel/serverless";
+import vercelServerless from "@astrojs/vercel/serverless";
 
 // https://astro.build/config
 export default defineConfig({
@@ -43,12 +44,7 @@ export default defineConfig({
     }
   },
   output: "server",
-  adapter: vercel({
-    webAnalytics: {
-      enabled: true,
-    },
-    maxDuration: 8,
-  })
+  adapter: vercelServerless(),
 });
 function rawFonts(ext: Array<string>) {
   return {
