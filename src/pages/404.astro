@@ -1,24 +1,45 @@
 ---
-import { Image } from "astro:assets";
-
-import PageLayout from "@/layouts/Base";
-import aboutImg from "@/assets/about-astro.png";
-
-const meta = {
-	title: "Oops! You found a missing page!",
-	description: "Oops! It looks like this page is lost in space!",
-};
+const description = '404';
+import '../styles/global.css';
 ---
 
-<PageLayout meta={meta}>
-	<h1 class="title mb-6">404 | Oops something went wrong</h1>
-	<p class="mb-8">Please use the navigation to find your way back</p>
-	<div class="my-4 grid justify-center">
-		<Image
-			class="rotate-180"
-			src={aboutImg}
-			alt="A cartoon cactus looking at the 'Astro.build' logo"
-			loading="eager"
-		/>
-	</div>
-</PageLayout>
+<section class="container404"></section>
+<div class="gif">
+  <img width="300" height="259" alt="Raccoon404Gif" src="/404.webp" />
+</div>
+<h1>{description}</h1>
+<span>It seems like you've wandered into the wrong forest!</span>
+<p>
+  <a href="/">Return Home</a>
+</p>
+<style>
+  body {
+    text-align: center;
+  }
+
+  .container404 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin: 16%;
+  }
+
+  h1 {
+    margin: 0 auto;
+    text-align: center;
+    border: 0;
+    font-size: 120px;
+    letter-spacing: 10px;
+  }
+
+  span {
+    font-family: '霞鹜文楷', cursive;
+    color: #5c5b77;
+  }
+
+  a {
+    color: #78c2ad;
+    text-decoration: none;
+  }
+</style>

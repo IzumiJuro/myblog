@@ -1,97 +1,60 @@
 ---
-import PageLayout from "@/layouts/Base";
-import PostPreview from "@/components/blog/PostPreview";
-import SocialList from "@/components/SocialList";
-import { getAllPosts, sortMDByDate } from "@/utils";
+import Tag from '../components/Tag.astro';
+import Layout from '../layouts/Layout.astro';
 
-const MAX_POSTS = 10;
-const allPosts = await getAllPosts();
-const allPostsByDate = sortMDByDate(allPosts).slice(0, MAX_POSTS);
-
-const cactusTech: Array<{ title: string; desc: string; href: string }> = [
-	{
-		title: "Astro",
-		desc: "Build fast websites, faster.",
-		href: "https://astro.build",
-	},
-	{
-		title: "Tailwind CSS",
-		desc: "Rapidly build modern websites without ever leaving your HTML.",
-		href: "https://tailwindcss.com",
-	},
-	{
-		title: "Markdown",
-		desc: "Simple and easy-to-use markup language.",
-		href: "https://www.markdownguide.org/",
-	},
-	{
-		title: "MDX",
-		desc: "Markdown for the component era.",
-		href: "https://mdxjs.com/",
-	},
-	{
-		title: "Satori",
-		desc: "Generating png Open Graph images for blog posts.",
-		href: "https://github.com/vercel/satori",
-	},
-	{
-		title: "Pagefind",
-		desc: "A fully static search library.",
-		href: "https://pagefind.app/",
-	},
-	{
-		title: "Astro Icon",
-		desc: "An easy to use Icon component for Astro.",
-		href: "https://github.com/natemoo-re/astro-icon#readme",
-	},
-	{
-		title: "Expressive Code",
-		desc: "Highly customisable source code & syntax highlighter",
-		href: "https://expressive-code.com/",
-	},
-];
+const pageTitle = 'Boniface';
 ---
 
-<PageLayout meta={{ title: "Home" }}>
-	<section>
-		<h1 class="title mb-6">Hello World!</h1>
-		<p class="mb-4">
-			Hi, I’m a theme for Astro, an example of how you can use this starter to create a personal
-			blog. If you want to know more about how you can customise me, add more posts, and make it
-			your own, click on the github icon link below and it will take you to my repo.
-		</p>
-		<SocialList />
-	</section>
-	<section aria-label="Blog post list" class="mt-16">
-		<h2 class="title mb-4 text-xl">Posts</h2>
-		<ul class="space-y-4">
-			{
-				allPostsByDate.map((p) => (
-					<li class="flex flex-col gap-x-2 sm:flex-row">
-						<PostPreview post={p} />
-					</li>
-				))
-			}
-		</ul>
-	</section>
-	<section class="mt-16">
-		<h2 class="title mb-4 text-xl">Technologies</h2>
-		<dl class="space-y-4">
-			{
-				cactusTech.map(({ href, title, desc }) => (
-					<div class="flex flex-col gap-2 md:flex-row">
-						<dt>
-							<span class="flex">
-								<a href={href} target="_blank" rel="noopener noreferrer" class="cactus-link">
-									{title}
-								</a>
-								:
-							</span>
-						</dt>
-						<dd>{desc}</dd>
-					</div>
-				))
-			}
-		</dl>
-	</section>
-</PageLayout>
+<Layout pageTitle={pageTitle}>
+  <div class="gif">
+    <img width="300" height="259" alt="RaccoonSpaceGif" src="/space.webp" />
+  </div>
+  <div class="flex flex-row items-center">
+    <img class="w-24 h-24 rounded-full m-5" src="https://avatars.githubusercontent.com/u/70286712?v=4" />
+  </div>
+  <Tag body='FullStack Developer'></Tag>
+  <Tag body='Jpop Fan'></Tag>
+  <Tag body='INTP'></Tag>
+  <h2 class="underline">About</h2>
+  <p class="">喜欢折腾新技术</p>
+  <h2>Skills</h2>
+  <div class="link-images">
+    <h3>Frontend</h3>
+    <Tag body="Nodejs">Nodejs</Tag>
+    <Tag body="Vue"></Tag>
+    <Tag body="React"></Tag>
+    <h3>Backend</h3>
+    <Tag body='Java'></Tag>
+    <Tag body='Rust'></Tag>
+    <Tag body='MongoDB'></Tag>
+  </div>
+  <h2>Interests</h2>
+  <p>打游戏(101/瓦/Osu!/雀魂)</p>
+  <p>看剧(动漫/日剧/韩剧)</p>
+  <p>听歌(很杂)</p>
+</Layout>
+<style>
+  /* small
+  small {
+    background-color: #584966;
+    color: #fdebf3;
+    border-radius: 6px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 600;
+    padding: 0.3em 0.6em 0.2em;
+  } */
+
+  /* Skill images */
+  .link-images img {
+    margin: 16px 4px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .link-images img {
+      height: 30px;
+      width: 30px;
+      margin: 16px 1px;
+    }
+  }
+
+</style>
