@@ -2,25 +2,21 @@
 const year = new Date().getFullYear();
 ---
 
-<footer>
-  <div>
+<footer
+  class="mt-auto flex w-full flex-col items-center justify-center pb-2 pt-20 text-center align-top gap-y-2"
+>
+  <div class="text-center">
     <div>
-      <ul class="icons">
-        <li>
-          <a
-            href="https://github.com/IzumiJuro"
-            target="_blank"
-            class="foot-btn"
-          >
-            <span class="git-icon">GitHub</span>
+      <ul class="cursor-default list-none p-0">
+        <li class="inline-block px-[0.5rem]">
+          <a href="https://github.com/IzumiJuro" target="_blank">
+            <div class="i-carbon-logo-github text-2xl"></div>
           </a>
         </li>
-        <li>
-          <a
-            href="https://space.bilibili.com/15426034/"
-            target="_blank"
-            class="foot-btn"><span class="bilibili-icon">Bilibili</span></a
-          >
+        <li class="inline-block px-[0.5rem]">
+          <a href="https://space.bilibili.com/15426034" target="_blank">
+            <div class="i-simple-icons-bilibili text-2xl"></div>
+          </a>
         </li>
       </ul>
     </div>
@@ -31,28 +27,3 @@ const year = new Date().getFullYear();
     </small>
   </div>
 </footer>
-<style>
-  footer {
-    margin: 4rem 0;
-  }
-
-  ul.icons {
-    cursor: default;
-    list-style: none;
-    padding: 0;
-  }
-
-  ul.icons li {
-    display: inline-block;
-    padding: 0 0.5rem;
-  }
-
-  div {
-    text-align: center;
-  }
-
-  small a {
-    color: #375a7f;
-    text-decoration: none;
-  }
-</style>

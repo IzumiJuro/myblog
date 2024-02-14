@@ -1,14 +1,14 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
-import { fade } from 'astro:transitions';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import { ViewTransitions } from "astro:transitions";
+import { fade } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
 const { pageTitle } = Astro.props;
 ---
 
 <!doctype html>
-<html transition:animate="none" lang="en" class="bg-flamingo">
+<html transition:animate="none" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="description" content="Astro description" />
@@ -34,25 +34,39 @@ const { pageTitle } = Astro.props;
   </head>
   <body>
     <Header />
-    <main transition:animate={fade({ duration: '0.4s' })}>
+    <main transition:animate={fade({ duration: "0.4s" })}>
       <slot />
       <Footer />
     </main>
-    <script>
-      function colorMode() {
+    <script is:inline>
+      const theme = (() => {
         if (
-          localStorage.theme === 'light' ||
-          (!('theme' in localStorage) &&
-            window.matchMedia('(prefers-color-scheme: light)').matches)
+          typeof localStorage !== "undefined" &&
+          localStorage.getItem("theme")
         ) {
-          document.documentElement.classList.add('light');
-        } else {
-          document.documentElement.classList.remove('light');
+          return localStorage.getItem("theme");
         }
+        if (window.matchMedia("(prefers-color-scheme: light)").matches) {
+          return "light";
+        }
+        return "dark";
+      })();
+
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
       }
 
-      colorMode();
-      document.addEventListener('astro:after-swap', colorMode);
+      window.localStorage.setItem("theme", theme);
+
+      document.addEventListener("astro:after-swap", () => {
+        if (theme === "dark") {
+          document.documentElement.classList.add("dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+        }
+      });
     </script>
   </body>
 </html>

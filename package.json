@@ -11,14 +11,22 @@
 		"check": "astro check"
 	},
 	"dependencies": {
+		"@astrojs/check": "^0.5.4",
 		"@astrojs/tailwind": "^5.1.0",
-		"@astrojs/vercel": "^7.3.0",
-		"astro": "4.3.5"
+		"@astrojs/vercel": "^7.3.1",
+		"astro": "4.3.5",
+		"typescript": "^5.3.3"
 	},
 	"packageManager": "pnpm@8.6.1",
 	"devDependencies": {
+		"@iconify-json/arcticons": "^1.1.95",
+		"@iconify-json/carbon": "^1.1.30",
+		"@iconify-json/simple-icons": "^1.1.91",
+		"@unocss/preset-icons": "^0.58.5",
 		"@unocss/preset-web-fonts": "^0.58.5",
+		"@unocss/preset-wind": "^0.58.5",
 		"@unocss/reset": "^0.58.5",
+		"@unocss/transformer-directives": "^0.58.5",
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0",
 		"unocss": "^0.58.5",

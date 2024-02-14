@@ -1,15 +1,42 @@
----
-import ThemeIcon from './ThemeIcon.astro';
----
-
-<div class="nav-bar">
-  <div class="title-link">
-    <a href="/">Boniface</a>
+<div class="grid grid-cols-2 mt-2 text-4xl">
+  <div class="font-pacifico font-[1.3rem] text-left">
+    <a
+      class="text-ctp-latte-text dark:text-ctp-mocha-text no-underline hover:underline hover:decoration-[2px] hover:underline-offset-[6px] focus:underline focus:decoration-[#375a7f] focus:decoration-[2px] focus:underline-offset-[6px]"
+      href="/">Boniface</a
+    >
   </div>
-  <div class="nav-links">
-    <a href="/works/">Works</a>
-    <a href="/posts/">Posts</a>
-    <a href="https://github.com/ttomczak3/Boniface" target="_blank">GitHub</a>
-    <ThemeIcon />
+  <div class="font-josefin text-xl text-right">
+    <a
+      class="text-ctp-latte-mauve dark:text-ctp-mocha-mauve no-underline m-[0_5px] hover:underline hover:decoration-ctp-latte-text dark:hover:decoration-ctp-mocha-text hover:decoration-[2px] hover:underline-offset-[6px] focus:underline focus:decoration-ctp-latte-text dark:focus:decoration-ctp-mocha-text focus:decoration-[2px] focus:underline-offset-[6px]"
+      href="/works/">Works</a
+    >
+    <a
+      class="text-ctp-latte-mauve dark:text-ctp-mocha-mauve no-underline m-[0_5px] hover:underline hover:decoration-ctp-latte-text dark:hover:decoration-ctp-mocha-text hover:decoration-[2px] hover:underline-offset-[6px] focus:underline focus:decoration-ctp-latte-text dark:focus:decoration-ctp-mocha-text focus:decoration-[2px] focus:underline-offset-[6px]"
+      href="/posts/">Posts</a
+    >
+    <a
+      class="text-ctp-latte-mauve dark:text-ctp-mocha-mauve no-underline m-[0_5px] hover:underline hover:decoration-ctp-latte-text dark:hover:decoration-ctp-mocha-text hover:decoration-[2px] hover:underline-offset-[6px] focus:underline focus:decoration-ctp-latte-text dark:focus:decoration-ctp-mocha-text focus:decoration-[2px] focus:underline-offset-[6px]"
+      href="https://github.com/IzumiJuro"
+      target="_blank">GitHub</a
+    >
+    <button
+      id="themeToggle"
+      class="i-carbon-sun dark:i-carbon-moon text-3xl pb-1"></button>
   </div>
 </div>
+
+<script>
+  const handleToggleClick = () => {
+    const element = document.documentElement;
+    if (localStorage.getItem("theme") === "dark") {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      element.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
+
+  const themeToggle = document.getElementById("themeToggle");
+  themeToggle.addEventListener("click", handleToggleClick);
+</script>
