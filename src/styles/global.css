@@ -179,9 +179,5 @@ body {
 }
 
 p {
-  @apply font-lxgw;
-}
-
-@layer base {
-  
+  @apply font-lxgw ml-3xl my-2;
 }
