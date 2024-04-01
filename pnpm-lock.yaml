@@ -56,8 +56,8 @@ devDependencies:
     specifier: ^0.58.5
     version: 0.58.5(postcss@8.4.35)(vite@5.1.1)
   unocss-catppuccin:
-    specifier: ^0.2.3
-    version: 0.2.3
+    specifier: ^1.0.0
+    version: 1.0.0
 
 packages:
 
@@ -525,8 +525,8 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
 
-  /@catppuccin/palette@0.2.0:
-    resolution: {integrity: sha512-PoAMQMEbL8fBEO80eusB+XQg+1i2kxQHw6COwBRC4bVWxWuRroZjm3K6bOdqPHNHKikDIV7wLi9hSG4NoD1FEQ==}
+  /@catppuccin/palette@1.1.1:
+    resolution: {integrity: sha512-wgITbl3OEIUnv8WPTdG2BGjepSMZtJW9V4XpxNDJjCvel0Q5+BxRmKH3XYN0vVjohHR+APCyZCpzSnO+GdsTLg==}
     dev: true
 
   /@emmetio/abbreviation@2.3.3:
@@ -4623,11 +4623,11 @@ packages:
       unist-util-visit-parents: 6.0.1
     dev: false
 
-  /unocss-catppuccin@0.2.3:
-    resolution: {integrity: sha512-E+pIQXIiQMmMu47xvCbXxd145x2l/QYUF7k1erb+GcPnlMl5W1vxsvrVC71bvbR2XUMeipnF0n6x21vLwDqvVw==}
-    engines: {node: '>=16'}
+  /unocss-catppuccin@1.0.0:
+    resolution: {integrity: sha512-Zx0ZESFvknmjDOZcm8EGg/eRClPjAU9gL0tEnIqj9CfUE94rv2B1BvWreR2VxuBRRI3OK6OIgjw8TAC7bBdDkg==}
+    engines: {node: '>=18'}
     dependencies:
-      '@catppuccin/palette': 0.2.0
+      '@catppuccin/palette': 1.1.1
     dev: true
 
   /unocss@0.58.5(postcss@8.4.35)(vite@5.1.1):

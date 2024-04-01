@@ -30,6 +30,6 @@
 		"prettier": "^3.2.5",
 		"prettier-plugin-astro": "^0.13.0",
 		"unocss": "^0.58.5",
-		"unocss-catppuccin": "^0.2.3"
+		"unocss-catppuccin": "^1.0.0"
 	}
 }
