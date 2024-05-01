@@ -20,7 +20,7 @@
 	"packageManager": "pnpm@8.6.1",
 	"devDependencies": {
 		"@iconify-json/arcticons": "^1.1.95",
-		"@iconify-json/carbon": "^1.1.30",
+		"@iconify-json/carbon": "^1.1.32",
 		"@iconify-json/simple-icons": "^1.1.91",
 		"@unocss/preset-icons": "^0.58.5",
 		"@unocss/preset-web-fonts": "^0.58.5",

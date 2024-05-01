@@ -26,8 +26,8 @@ devDependencies:
     specifier: ^1.1.95
     version: 1.1.95
   '@iconify-json/carbon':
-    specifier: ^1.1.30
-    version: 1.1.30
+    specifier: ^1.1.32
+    version: 1.1.32
   '@iconify-json/simple-icons':
     specifier: ^1.1.91
     version: 1.1.91
@@ -735,8 +735,8 @@ packages:
       '@iconify/types': 2.0.0
     dev: true
 
-  /@iconify-json/carbon@1.1.30:
-    resolution: {integrity: sha512-tEvEmxCO0J0t0p2NT2IvJ+iiSNqqnabygSo/S8wkeh2Guhc4tQOgl9dxvDMpy6RqwtKRTKsaROPtnRfu/bl+Tg==}
+  /@iconify-json/carbon@1.1.32:
+    resolution: {integrity: sha512-9X8wVI7AmcnjTyOdDoCgyNwcFL9lb++nacDS2yLANTc27F4y9Q8pJIfUVsakR4KcGqSSBCyXwEmBDeopeTZFqA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: true
