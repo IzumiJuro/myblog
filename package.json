@@ -22,7 +22,7 @@
 		"@iconify-json/arcticons": "^1.1.95",
 		"@iconify-json/carbon": "^1.1.30",
 		"@iconify-json/simple-icons": "^1.1.91",
-		"@unocss/preset-icons": "^0.58.5",
+		"@unocss/preset-icons": "^0.59.4",
 		"@unocss/preset-web-fonts": "^0.58.5",
 		"@unocss/preset-wind": "^0.58.5",
 		"@unocss/reset": "^0.58.5",
