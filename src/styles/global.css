@@ -71,7 +71,6 @@ h1 {
   padding: 0;
 } */
 */ */
-
 /* Theme Icon
 html.light {
   background-color: #fdebf3;
@@ -171,7 +170,7 @@ h2 {
 }
 
 h3 {
-  @apply text-ctp-latte-rosewater dark:text-ctp-mocha-rosewater text-2xl mx-5 my-2  font-sarasa;
+  @apply text-ctp-latte-rosewater dark:text-ctp-mocha-rosewater text-2xl mx-5 my-2 font-sarasa;
 }
 
 body {

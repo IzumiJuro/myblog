@@ -1,11 +1,23 @@
 ---
 interface Props {
   body: string;
+  href?: string; // Optional href property
 }
-const { body } = Astro.props;
+
+const { body, href } = Astro.props;
 ---
 
-<small
-  class="bg-ctp-latte-sapphire dark:bg-ctp-mocha-lavender text-ctp-latte-base dark:text-ctp-mocha-base text-base rounded-md font-lxgw font-semibold px-2 py-1"
-  >{body}</small
->
+{
+  href ? (
+    <a
+      href={href}
+      class="bg-ctp-latte-sapphire dark:bg-ctp-mocha-lavender text-ctp-latte-base dark:text-ctp-mocha-base text-base rounded-md font-lxgw font-semibold px-2 py-1"
+    >
+      {body}
+    </a>
+  ) : (
+    <small class="bg-ctp-latte-sapphire dark:bg-ctp-mocha-lavender text-ctp-latte-base dark:text-ctp-mocha-base text-base rounded-md font-lxgw font-semibold px-2 py-1">
+      {body}
+    </small>
+  )
+}
